@@ -1,0 +1,38 @@
+@import './_bootstrap.scss';
+
+body {
+	margin: 10vh 10vw;
+	margin-bottom: 10rem;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 3rem;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 6rem;
+	background: black;
+	color: white;
+	font-size: 2rem;
+
+	display: flex;
+	justify-content: center;
+
+	opacity: 0.7;
+
+	h4 {
+		margin: auto;
+	}
+}

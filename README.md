@@ -1,3 +1,7 @@
-How to use
-- Open the docs in a markdown previewer such as VSCode built-in thingy or sublime's extension
-- OR run `npm install` followed by `gulp`
+# Markdown toolkit
+
+*Made with bootswrap yeti theme*
+
+Bascially, takes the markdown files and renders into HTML and serves.
+
+Have fun.

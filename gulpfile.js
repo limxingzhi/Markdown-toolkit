@@ -13,7 +13,7 @@ var pathBUILD = ['./build/*'];
 
 gulp.task('build:sass', function () {
   return gulp.src('./styles/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./build'));
 });
 
@@ -51,4 +51,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', ['build:md', 'build:sass']);
-gulp.task('default', gulpsync.sync(['clean', 'build', 'serve','watch']));
+gulp.task('default', gulpsync.sync(['clean', 'build', ['serve','watch']]));
