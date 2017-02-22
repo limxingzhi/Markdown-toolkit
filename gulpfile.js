@@ -8,7 +8,7 @@ var gulpsync = require('gulp-sync')(gulp);
 var headerfooter = require('gulp-headerfooter');
 var sass = require('gulp-sass');
 
-var pathMD = ['./docs/*'];
+var pathMD = ['./docs/*.md', './README.md'];
 var pathBUILD = ['./build/*'];
 
 gulp.task('build:sass', function () {
@@ -46,8 +46,8 @@ gulp.task('serve', function () {
 gulp.task('watch', function() {
   // Reload browser when build files changed
   gulp.watch('./styles/*.scss', ['build:sass']);
-  gulp.watch("./docs/*.md", ['build:md']);
-  gulp.watch("./build/*").on("change", browserSync.reload);
+  gulp.watch(pathMD, ['build:md']);
+  gulp.watch(pathBUILD).on("change", browserSync.reload);
 });
 
 gulp.task('build', ['build:md', 'build:sass']);
