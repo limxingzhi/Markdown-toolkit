@@ -40,8 +40,7 @@ gulp.task('serve', function () {
     middleware: function(req, res, next){
 
       if (req.url !== '' && req.url !== '/') {
-        var containsExtension = req.url.match(/\.[^.]*/);
-        req.url += containsExtension ? '' : '.html' ;
+        req.url += req.url.match(/\.[^.]*/) ? '' : '.html' ;
       }
       return next();
 
