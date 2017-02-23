@@ -8,6 +8,7 @@ var gulpsync = require('gulp-sync')(gulp);
 var headerfooter = require('gulp-headerfooter');
 var sass = require('gulp-sass');
 var minify = require('gulp-minify');
+var browserify = require('gulp-browserify');
 
 var pathMD = ['./docs/*.md', './README.md'];
 var pathJS = ['./js/*'];
@@ -35,6 +36,10 @@ gulp.task('clean', function () {
 
 gulp.task('build:js', function() {
   return gulp.src('./js/*.js')
+    .pipe(browserify({
+      insertGlobals : true,
+      debug : !gulp.env.production
+    }))
     .pipe(minify({
         ext:{
             min:'.js'
