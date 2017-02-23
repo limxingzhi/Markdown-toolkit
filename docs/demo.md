@@ -20,10 +20,16 @@
 `$ echo code`
 
 ```
-/* code */
+/* this is in markdown */
 
 console.log('hello world');
 ```
+
+<pre class="line-numbers">
+<code class="language-javascript">/* this is in html with prism.js*/
+
+console.log('hello world');
+</code></pre>
 
 ---
 
