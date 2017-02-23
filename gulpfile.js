@@ -11,7 +11,7 @@ var sass = require('gulp-sass');
 var pathMD = ['./docs/*.md', './README.md'];
 var pathBUILD = ['./build/*'];
 
-var middlewareExclude = ['.html', '.css', '.js'];
+var middlewareExclude = ['.html', '.css', '.js','.png','.jpg'];
 
 gulp.task('build:sass', function () {
   return gulp.src('./styles/*.scss')
